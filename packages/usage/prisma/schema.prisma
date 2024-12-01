@@ -4,7 +4,7 @@
 generator client {
   provider        = "prisma-client-js"
   // output   = "./generated/client"
-  previewFeatures = ["views"]
+  previewFeatures = ["views","omitApi"]
   // previewFeatures = ["views"]
 }
 
@@ -20,7 +20,7 @@ generator zod {
   provider                         = "ts-node-dev ../generator/src/bin.ts"
   // provider                         = "zod-prisma-types"
   output                           = "./generated/zod" // default is ./generated/zod
-  useMultipleFiles                 = true // default is false 
+  useMultipleFiles                 = false // default is false 
   writeBarrelFiles                 = true // default is true
   // createInputTypes                 = false // default is true
   // createModelTypes                 = false // default is true
@@ -33,9 +33,9 @@ generator zod {
   createPartialTypes               = true // default is false
   // useDefaultValidators             = true // default is true
   // coerceDate                       = true // default is true
-  // writeNullishInModelTypes         = false // default is false
+  writeNullishInModelTypes         = true // default is false
   // prismaClientPath                 = "./generated/client" // optional
-  useTypeAssertions                = false // default is false
+  useTypeAssertions                = true // default is false
 }
 
 // MIXED CASE ENUMS AND MODELS

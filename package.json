@@ -1,5 +1,5 @@
 {
-  "name": "zod-prisma-types-monorepo",
+  "name": "zod-prisma-types",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

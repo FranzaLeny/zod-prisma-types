@@ -25,9 +25,9 @@ export const writeCountArgs = (
     .blankLine()
     .write(`export const ${model.name}CountOutputTypeArgsSchema: `)
     .conditionalWrite(
-      (prismaVersion?.major === 5 && prismaVersion?.minor >= 1) || prismaVersion?.major === 6 ||
+      (prismaVersion?.major === 5 && prismaVersion?.minor >= 1) ||
         // fallback to newest version of client version cannot be determined
-        prismaVersion === undefined,
+        prismaVersion?.major === 6,
       `z.ZodType<Prisma.${model.name}CountOutputTypeDefaultArgs> = `,
     )
     .conditionalWrite(

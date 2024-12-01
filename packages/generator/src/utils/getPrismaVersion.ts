@@ -31,6 +31,7 @@ export const getPrismaVersion = () => {
 
     // Validate and transform version string into object
     const version = PrismaVersionSchema.parse({ major, minor, patch });
+    console.info(`Verison Prisma: ${version}`);
 
     return version;
   } catch (error) {
